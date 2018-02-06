@@ -23,11 +23,11 @@
 	* Qué otros códigos de error existen?, en qué caso se manejarán?
 
 4. Realice una nueva conexión con telnet, esta vez a:
-	* Host: www.info.gov.hk
+	* Host: www.httpbin.org
 	* Puerto: 80
 	* Versión HTTP: 1.1
 
-	Ahora, solicite (GET) el recurso /index.html. Qué se obtiene como resultado?
+	Ahora, solicite (GET) el recurso */html*. Qué se obtiene como resultado?
 
 Muy bien!, acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que se usa un navegador, éste se conecta a un servidor HTTP, envía peticiones (del protocolo HTTP), espera el resultado de las mismas, y -si se trata de contenido HTML- lo interpreta y dibuja. Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: cual es la diferencia entre los verbos GET y POST?
 
@@ -39,7 +39,7 @@ En este ejercicio, va a implementar una aplicación Web muy básica, haciendo us
 I. Para esto, realice lo siguiente:
 
 1. Revise la clase SampleServlet incluida en el proyecto, e identifique qué hace. Revise qué valor tiene el parámetro 'urlPatterns' de la anotación [@WebServlet](http://docs.oracle.com/javaee/6/tutorial/doc/bnafu.html), pues este indica qué URLs atiende las peticiones el servlet.
-2. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ser sección de plugins).
+2. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ver sección de plugins).
 3. Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
 
 	```xml
@@ -48,7 +48,7 @@ I. Para esto, realice lo siguiente:
 	```
 4. Abra un navegador, y en la barra de direcciones ponga la URL con la cual se le enviarán peticiones al 'SampleServlet'. Tenga en cuenta que la URL tendrá como host 'localhost', y como puerto, el configurado en el pom.xml. Debería obtener un mensaje de saludo.
 
-5. Observe que el Servlet 'SampleServlet' acepta peticiones GET, y opcionalmente, lee el parámetro 'nombre'. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp). 
+5. Observe que el Servlet 'SampleServlet' acepta peticiones GET, y opcionalmente, lee el parámetro 'name'. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp). 
 6. Agregue el repositorio en el cual se encuentra la dependencia requerida para el ejercicio:
 
 
