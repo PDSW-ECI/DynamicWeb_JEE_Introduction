@@ -48,11 +48,13 @@ Muy bien!, acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que 
      ```
 
      Utilice ahora el parámetro `-v` y con el parámetro `-i`:
+     
      ```bash
      curl -v www.httpbin.org
      curl -i www.httpbin.org
-```
-     * Cuales son las diferencias?
+     ```
+
+          * Cuales son las diferencias?
 
 
 
