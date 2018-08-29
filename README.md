@@ -29,7 +29,32 @@
 
 	Ahora, solicite (GET) el recurso */html*. Qué se obtiene como resultado?
 
-Muy bien!, acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que se usa un navegador, éste se conecta a un servidor HTTP, envía peticiones (del protocolo HTTP), espera el resultado de las mismas, y -si se trata de contenido HTML- lo interpreta y dibuja. Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: cual es la diferencia entre los verbos GET y POST?
+Muy bien!, acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que se usa un navegador, éste se conecta a un servidor HTTP, envía peticiones (del protocolo HTTP), espera el resultado de las mismas, y -si se trata de contenido HTML- lo interpreta y dibuja. 
+
+5. Seleccione el contenido `HTML` de la respuesta y copielo al cortapapeles `CTRL-SHIFT-C`. Ejecute el comando `wc` (_word count_) para contar palabras con la opción `-c` para contar el número de caracteres:
+
+     ```bash
+     wc -c 
+     ```
+
+     Pegue el contenido del portapapeles con `CTRL-SHIFT-V` y presione `CTRL-D` (fin de archivo de Linux). Si no termina el comando `wc` presione `CTRL-D` de nuevo. No presione mas de dos veces `CTRL-D` indica que se termino la entrada y puede cerrarle la terminal. 
+
+     Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: cual es la diferencia entre los verbos GET y POST?
+
+6. En la practica no se utiliza `telnet` para hacer peticiones a sitios web sino el comando `curl` con ayuda de la linea de comandos:
+
+     ```bash
+     curl www.httpbin.org
+     ```
+
+     Utilice ahora el parámetro `-v` y con el parámetro `-i`:
+     ```bash
+     curl -v www.httpbin.org
+     curl -i www.httpbin.org
+```
+     * Cuales son las diferencias?
+
+
 
 # Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
 
