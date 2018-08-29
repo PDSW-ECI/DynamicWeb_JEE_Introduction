@@ -54,7 +54,7 @@ Muy bien!, acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que 
      curl -i www.httpbin.org
      ```
 
-          * Cuales son las diferencias?
+          * Cuales son las diferencias con los diferentes parámetros?
 
 
 
